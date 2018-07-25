@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sunware.example.dao.ExampleDao">
+
+    <resultMap id="deptResultMap" type="com.sunware.example.entity.Dept">
+        <result property="deptNo" column="DEPTNO" />
+        <result property="dName" column="DNAME" />
+        <result property="loc" column="LOC" />
+    </resultMap>
+
+    <sql id="deptCol" >
+        DEPT,DNAME,LOC
+    </sql>
+
+    <select id="qryDeptTable" parameterType="com.sunware.example.entity.Dept" resultMap="deptResultMap">
+        select
+        <include refid="deptCol" />
+        from dept t
+        <where>
+            <if test="deptNo != null and deptNo != ''">
+              and t.deptno = #{deptNo}
+            </if>
+            <if test="dName != null and dName != ''">
+                and t.dname = #{dName}
+            </if>
+            <if test="loc != null and loc != ''">
+                and t.loc = #{loc}
+            </if>
+        </where>
+    </select>
+
+</mapper>
