@@ -1,4 +1,4 @@
-package com.sunware.example.entity;
+package com.sunware.example.bean.pojo;
 
 public class Dept {
 

@@ -56,9 +56,9 @@
 
     </settings>
     
-    <plugins>
+    <!--<plugins>
         <plugin interceptor="net.chenlin.dp.common.support.orm.plugins.PaginationResultSetHandlerInterceptor"/>
         <plugin interceptor="net.chenlin.dp.common.support.orm.plugins.PaginationStatementHandlerInterceptor"/>
-    </plugins>
+    </plugins>-->
     
 </configuration>

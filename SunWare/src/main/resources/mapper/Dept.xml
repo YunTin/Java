@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sunware.example.dao.ExampleDao">
+<mapper namespace="com.sunware.example.mapper.ExampleDao">
 
-    <resultMap id="deptResultMap" type="com.sunware.example.entity.Dept">
+    <resultMap id="deptResultMap" type="com.sunware.example.bean.pojo.Dept">
         <result property="deptNo" column="DEPTNO" />
         <result property="dName" column="DNAME" />
         <result property="loc" column="LOC" />
@@ -13,7 +13,7 @@
         DEPT,DNAME,LOC
     </sql>
 
-    <select id="qryDeptTable" parameterType="com.sunware.example.entity.Dept" resultMap="deptResultMap">
+    <select id="qryDept" parameterType="com.sunware.example.bean.pojo.Dept" resultMap="deptResultMap">
         select
         <include refid="deptCol" />
         from dept t

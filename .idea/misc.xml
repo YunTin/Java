@@ -10,5 +10,8 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" location="D:/java/config/mybatis-generator-config_1_0.dtd" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
